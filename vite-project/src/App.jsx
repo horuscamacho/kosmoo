@@ -22,7 +22,6 @@ function App() {
     gettingElements(fields)
   }, [elements, required, preview, form, name, textColor, element])
 
-  console.log(textColor)
 
   return (
     <div className="container mx-auto bg-white p-4 ">

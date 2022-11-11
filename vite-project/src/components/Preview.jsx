@@ -8,7 +8,6 @@ const Preview = (props) => {
   const { preview, data, name, required, textColor } = props;
 
   
-  console.log(required)
   function setElement(obj) {
     switch (obj[0].component) {
       case "Input":

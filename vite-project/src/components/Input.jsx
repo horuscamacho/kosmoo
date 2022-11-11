@@ -12,22 +12,19 @@ const Input = (props) => {
   function handleSelect(e) {
     switch (e.target.value) {
       case "Input":
-        console.log("Es el input");
+        
         let input = data.filter((el) => el.component === "Input");
         preview(input);
         break;
       case "Text Area":
-        console.log("Es el Text Area");
         let textArea = data.filter((el) => el.component === "Text Area");
         preview(textArea);
         break;
       case "Options":
-        console.log("Es el Option");
         let option = data.filter((el) => el.component === "Options");
         preview(option);
         break;
       case "Select":
-        console.log("Es el select");
         let select = data.filter((el) => el.component === "Select");
         preview(select);
         break;

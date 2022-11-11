@@ -9,7 +9,7 @@ const Form = (props) => {
   
 
 function handleElements(obj){
-  console.log(obj)
+  
   if(obj.prev[0].component === "Input") return <div className="flex "><InputText name={obj.naame} textColor={obj.textColor} required={obj.req}/><button onClick={(e) => handleDeleteElement(e) } value={obj.id} className="ml-2 w-4 h-6 mt-2 bg-red-500">X</button></div>
   if(obj.prev[0].component === "Options") return <div className="flex " ><InputRadio name={obj.naame} textColor={obj.textColor} required={obj.req}/><button onClick={(e) => handleDeleteElement(e) } value={obj.id} className="ml-2 w-4 h-6 mt-2 bg-red-500">X</button></div>
   if(obj.prev[0].component === "Text Area") return <div className="flex "><InputTextArea name={obj.naame} textColor={obj.textColor} required={obj.req}/><button onClick={(e) => handleDeleteElement(e) } value={obj.id} className="ml-2 w-4 h-6 mt-2 bg-red-500">X</button></div>
@@ -19,11 +19,7 @@ function handleElements(obj){
 
 function handleDeleteElement(e){
   let newId = e.target.value
-  let newArr = element
   let idToDelete = parseInt(newId, 10)
-
-  console.log("e.target.value ", typeof idToDelete)
-  
   setElement(element.filter(el => el.id !== idToDelete))
 }
   return (
